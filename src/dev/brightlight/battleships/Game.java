@@ -3,11 +3,10 @@ package dev.brightlight.battleships;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
-import java.awt.image.BufferedImage;
 
 import dev.brightlight.battleships.display.Display;
+import dev.brightlight.battleships.gfx.Assets;
 import dev.brightlight.battleships.gfx.ImageLoader;
-import dev.brightlight.battleships.gfx.SpriteSheet;
 
 public class Game implements Runnable{
 	
@@ -21,9 +20,6 @@ public class Game implements Runnable{
 	private BufferStrategy bs;
 	private Graphics g;
 	
-	private BufferedImage test;
-	private SpriteSheet sheet;
-	
 	public Game(String title, int width, int height){
 		
 		this.width = width;
@@ -35,8 +31,7 @@ public class Game implements Runnable{
 	private void init(){
 		
 		display = new Display(title, width, height);
-		test = ImageLoader.loadImage("/textures/tileset.png");
-		sheet = new SpriteSheet(test);
+		Assets.init();
 		
 	}
 	
@@ -56,8 +51,10 @@ public class Game implements Runnable{
 		g.clearRect(0, 0, width, height);
 		// Draw Here!
 		
-		g.drawImage(sheet.crop(0, 32, 32, 32), 5, 5, null);
-		
+		g.drawImage(Assets.water, 0, 0, null);
+		g.drawImage(Assets.water, 32, 0, null);
+		g.drawImage(Assets.patrolboat, 0, 0, null);
+
 		//End Drawing!
 		bs.show();
 		g.dispose();
