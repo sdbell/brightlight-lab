@@ -10,8 +10,6 @@ git push -u orgin master
 
 TODO:
 
-1) Remove background from sprite images using Gimp.
+1) Find a way to rotate cropped images and implement
 
-2) Stitch sprite images together into one imager/spritesheet using Gimp.
-
-3) Complete Video Tutorial 9
+2) Video 10
