@@ -51,9 +51,11 @@ public class Game implements Runnable{
 		g.clearRect(0, 0, width, height);
 		// Draw Here!
 		
-		g.drawImage(Assets.water, 0, 0, null);
-		g.drawImage(Assets.water, 32, 0, null);
-		g.drawImage(Assets.patrolboat, 0, 0, null);
+		g.drawImage(Assets.waterH, 0, 0, null);
+		g.drawImage(Assets.waterV, 32, 0, null);
+		g.drawImage(Assets.waterV, 64, 0, null);
+		g.drawImage(Assets.patrolboatV, 0, 0, null);
+		g.drawImage(Assets.battleshipH, 32, 0, null);
 
 		//End Drawing!
 		bs.show();
