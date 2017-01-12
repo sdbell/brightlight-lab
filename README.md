@@ -10,6 +10,6 @@ git push -u orgin master
 
 TODO:
 
-1) Find a way to rotate cropped images and implement
+1) Video 10
 
-2) Video 10
+
